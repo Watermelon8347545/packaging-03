@@ -9,5 +9,5 @@ RUN chmod +x /my_bash.sh
 
 # execute the bash file
 RUN
-  bash /my_bash.sh
+  /my_bash.sh
   python /my_python.py

@@ -5,11 +5,9 @@ RUN echo "printing from inside dockerfile"
 COPY . /
 
 # make the bash file executable
-RUN chmod +x /my_bash.sh
+RUN chmod +x /my_bash.sh &&\
+    /my_bash.sh
 
 RUN python -m pip install --upgrade pip &&\
     python -m pip install --upgrade setuptools &&\
     python /my_python.py
-
-# execute the bash file
-RUN /my_bash.sh

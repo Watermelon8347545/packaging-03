@@ -8,6 +8,5 @@ COPY . /
 RUN chmod +x /my_bash.sh
 
 # execute the bash file
-RUN
-  /my_bash.sh
-  python /my_python.py
+RUN /my_bash.sh &&\
+    python /my_python.py

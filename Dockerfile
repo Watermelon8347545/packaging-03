@@ -7,5 +7,5 @@ COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 # copy & execute a python file
-COPY main.py /main.py
+COPY main.py /
 CMD ["python", "./main.py"]

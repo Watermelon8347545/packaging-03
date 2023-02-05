@@ -1,10 +1,11 @@
-FROM python:latest
+FROM alpine:latest
 RUN echo "printing from inside dockerfile"
 
 # copy & execute a bash file
-COPY entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+COPY my_bash.sh /
+RUN chmod +x /my_bash.sh
+RUN /my_bash.sh
 
 # copy & execute a python file
-COPY main.py /
-CMD ["python", "./main.py"]
+#COPY my_python.py /
+#CMD ["python", "./my_python.py"]

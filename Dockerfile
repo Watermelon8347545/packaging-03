@@ -1,5 +1,4 @@
 FROM python:latest
-
 RUN echo "printing from inside dockerfile"
 
 # copy & execute a bash file
